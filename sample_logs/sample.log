@@ -1,0 +1,62 @@
+May 10 02:14:01 webserver sshd[1201]: Failed password for root from 45.33.32.156 port 51234 ssh2
+May 10 02:14:03 webserver sshd[1202]: Failed password for root from 45.33.32.156 port 51235 ssh2
+May 10 02:14:05 webserver sshd[1203]: Failed password for admin from 45.33.32.156 port 51236 ssh2
+May 10 02:14:06 webserver sshd[1204]: Failed password for root from 45.33.32.156 port 51237 ssh2
+May 10 02:14:08 webserver sshd[1205]: Failed password for ubuntu from 45.33.32.156 port 51238 ssh2
+May 10 02:14:09 webserver sshd[1206]: Failed password for deploy from 45.33.32.156 port 51239 ssh2
+May 10 02:14:11 webserver sshd[1207]: Failed password for git from 45.33.32.156 port 51240 ssh2
+May 10 02:14:12 webserver sshd[1208]: Failed password for postgres from 45.33.32.156 port 51241 ssh2
+May 10 02:14:14 webserver sshd[1209]: Failed password for oracle from 45.33.32.156 port 51242 ssh2
+May 10 02:14:15 webserver sshd[1210]: Failed password for mysql from 45.33.32.156 port 51243 ssh2
+May 10 02:14:17 webserver sshd[1211]: Failed password for ftp from 45.33.32.156 port 51244 ssh2
+May 10 02:14:18 webserver sshd[1212]: Failed password for test from 45.33.32.156 port 51245 ssh2
+May 10 02:14:20 webserver sshd[1213]: Failed password for user from 45.33.32.156 port 51246 ssh2
+May 10 02:14:21 webserver sshd[1214]: Failed password for backup from 45.33.32.156 port 51247 ssh2
+May 10 02:14:23 webserver sshd[1215]: Failed password for ubuntu from 45.33.32.156 port 51248 ssh2
+May 10 02:14:24 webserver sshd[1216]: Failed password for root from 45.33.32.156 port 51249 ssh2
+May 10 02:14:26 webserver sshd[1217]: Failed password for admin from 45.33.32.156 port 51250 ssh2
+May 10 02:14:27 webserver sshd[1218]: Failed password for root from 45.33.32.156 port 51251 ssh2
+May 10 02:14:29 webserver sshd[1219]: Failed password for www-data from 45.33.32.156 port 51252 ssh2
+May 10 02:14:30 webserver sshd[1220]: Failed password for root from 45.33.32.156 port 51253 ssh2
+May 10 02:14:32 webserver sshd[1221]: Failed password for root from 45.33.32.156 port 51254 ssh2
+May 10 02:14:33 webserver sshd[1222]: Accepted password for root from 45.33.32.156 port 51255 ssh2
+May 10 02:14:33 webserver sshd[1222]: pam_unix(sshd:session): session opened for user root
+May 10 03:22:10 webserver sshd[2301]: Failed password for alice from 198.51.100.42 port 44321 ssh2
+May 10 03:22:12 webserver sshd[2302]: Failed password for alice from 198.51.100.42 port 44322 ssh2
+May 10 03:22:14 webserver sshd[2303]: Failed password for alice from 198.51.100.42 port 44323 ssh2
+May 10 03:22:16 webserver sshd[2304]: Failed password for alice from 198.51.100.42 port 44324 ssh2
+May 10 03:22:18 webserver sshd[2305]: Accepted password for alice from 198.51.100.42 port 44325 ssh2
+May 10 03:22:18 webserver sshd[2305]: pam_unix(sshd:session): session opened for user alice
+May 10 08:05:11 webserver sshd[3101]: Failed password for bob from 203.0.113.77 port 31000 ssh2
+May 10 08:05:13 webserver sshd[3102]: Failed password for charlie from 203.0.113.77 port 31001 ssh2
+May 10 08:05:15 webserver sshd[3103]: Failed password for dave from 203.0.113.77 port 31002 ssh2
+May 10 08:05:17 webserver sshd[3104]: Failed password for eve from 203.0.113.77 port 31003 ssh2
+May 10 08:05:19 webserver sshd[3105]: Failed password for frank from 203.0.113.77 port 31004 ssh2
+May 10 09:30:00 webserver sudo[4001]: apurva : TTY=pts/0 ; PWD=/home/apurva ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+May 10 09:35:22 webserver sshd[4100]: Accepted password for apurva from 10.0.0.5 port 55100 ssh2
+May 10 09:35:22 webserver sshd[4100]: pam_unix(sshd:session): session opened for user apurva
+May 10 10:15:00 webserver useradd[5001]: new user: name=svcaccount, UID=1005, GID=1005, home=/home/svcaccount
+May 10 10:16:00 webserver chpasswd[5002]: password changed for user svcaccount
+May 10 11:00:00 webserver sshd[5101]: Accepted publickey for apurva from 10.0.0.5 port 55200 ssh2
+May 10 11:00:00 webserver sshd[5101]: pam_unix(sshd:session): session opened for user apurva
+May 10 11:45:00 webserver sshd[5201]: connection closed by 10.0.0.5 port 55200
+May 10 14:00:00 webserver sshd[6001]: Accepted password for bob from 10.0.1.22 port 43000 ssh2
+May 10 14:00:00 webserver sshd[6001]: pam_unix(sshd:session): session opened for user bob
+May 10 15:30:00 webserver sudo[6100]: bob : TTY=pts/1 ; PWD=/var/log ; USER=root ; COMMAND=/bin/cat /etc/shadow
+May 10 17:00:00 webserver sshd[7001]: connection closed by 203.0.113.99 port 22222 timeout
+May 10 17:05:00 webserver sshd[7002]: Failed password for root from 192.0.2.88 port 12345 ssh2
+May 10 17:05:02 webserver sshd[7003]: Failed password for root from 192.0.2.88 port 12346 ssh2
+May 10 17:05:04 webserver sshd[7004]: Failed password for admin from 192.0.2.88 port 12347 ssh2
+May 10 17:05:06 webserver sshd[7005]: Failed password for root from 192.0.2.88 port 12348 ssh2
+May 10 17:05:08 webserver sshd[7006]: Failed password for test from 192.0.2.88 port 12349 ssh2
+May 10 17:05:10 webserver sshd[7007]: Failed password for root from 192.0.2.88 port 12350 ssh2
+May 10 23:45:00 webserver sshd[8001]: Accepted password for charlie from 172.16.0.50 port 22100 ssh2
+May 10 23:45:00 webserver sshd[8001]: pam_unix(sshd:session): session opened for user charlie
+May 10 23:50:00 webserver sshd[8002]: Failed password for root from 185.220.101.1 port 9999 ssh2
+May 10 23:50:02 webserver sshd[8003]: Failed password for root from 185.220.101.1 port 9998 ssh2
+May 10 23:50:04 webserver sshd[8004]: Failed password for admin from 185.220.101.1 port 9997 ssh2
+May 10 23:50:06 webserver sshd[8005]: Failed password for root from 185.220.101.1 port 9996 ssh2
+May 10 23:50:08 webserver sshd[8006]: Failed password for ubuntu from 185.220.101.1 port 9995 ssh2
+May 10 23:50:10 webserver sshd[8007]: Failed password for root from 185.220.101.1 port 9994 ssh2
+May 10 23:50:12 webserver sshd[8008]: Failed password for mysql from 185.220.101.1 port 9993 ssh2
+May 10 23:50:14 webserver sshd[8009]: Failed password for root from 185.220.101.1 port 9992 ssh2

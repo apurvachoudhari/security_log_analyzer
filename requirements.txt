@@ -1,0 +1,7 @@
+# Security Log Analyzer — dependencies
+# Standard library only for the core analyzer (no external deps needed).
+# Install dev/test dependencies below.
+
+# Testing
+pytest>=7.4
+pytest-cov>=4.1       # coverage reports: pytest --cov=analyzer tests/
