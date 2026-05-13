@@ -1,0 +1,100 @@
+version: '3.8'
+
+# Sample Docker Compose - Test file for bulk-config-change.sh
+
+services:
+  web:
+    image: registry.example.com/web-app:v1.0.0
+    container_name: web-app
+    ports:
+      - "8080:8080"
+    environment:
+      LOG_LEVEL: INFO
+      DATABASE_HOST: postgres:5432
+      DATABASE_NAME: myapp
+      ENVIRONMENT: development
+      CACHE_URL: redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./config:/etc/config:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  api:
+    image: registry.example.com/api-service:v1.0.0
+    container_name: api-service
+    ports:
+      - "3000:3000"
+    environment:
+      LOG_LEVEL: INFO
+      DATABASE_URL: postgresql://user:password@postgres:5432/myapp
+      ENVIRONMENT: development
+      REDIS_URL: redis://redis:6379
+      API_PORT: 3000
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  worker:
+    image: registry.example.com/worker-service:v1.0.0
+    container_name: worker-service
+    environment:
+      LOG_LEVEL: INFO
+      DATABASE_URL: postgresql://user:password@postgres:5432/myapp
+      ENVIRONMENT: development
+      REDIS_URL: redis://redis:6379
+      WORKER_THREADS: 4
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: myapp
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d myapp"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+  redis_data:
